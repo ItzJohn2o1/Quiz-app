@@ -5,22 +5,22 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const quizData = [
   {
-    prompt: 'This is the question...',
-    type: 'multiple-choice',
-    choices: ['choice 1', 'choice 2', 'choice 3', 'choice 4'],
-    correct: 0,
-  },
-  {
-    prompt: 'This is another question...',
-    type: 'multiple-answer',
-    choices: ['choice 1', 'choice 2', 'choice 3', 'choice 4'],
-    correct: [0, 2],
-  },
-  {
-    prompt: 'This is the third question...',
+    prompt: 'The Earth is the third planet from the Sun.',
     type: 'true-false',
-    choices: ['choice 1', 'choice 2'],
-    correct: 1,
+    choices: ['True', 'False'],
+    //correct: 0,
+  },
+  {
+    prompt: 'Which one is a JavaScript framework?',
+    type: 'multiple-choice',
+    choices: ['React', 'Banana', 'Car', 'Table'],
+    //correct: 0,
+  },
+  {
+    prompt: 'Which of these are programming languages?',
+    type: 'multiple-answer',
+    choices: ['Python', 'HTML', 'Java', 'CSS'],
+    //correct: [0, 2],
   },
 ];
 
@@ -85,7 +85,7 @@ export default function Index() {
       });
     } else {
       router.push({
-        pathname: '../components/Summary.jsx',
+        pathname: '/Summary',
         params: {
           userAnswers: JSON.stringify(updatedAnswers),
         },
